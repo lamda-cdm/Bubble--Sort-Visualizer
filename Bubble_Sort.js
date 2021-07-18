@@ -26,7 +26,7 @@ option_size.addEventListener('change', () => {
         box.classList.add('elements');
         box.classList.add('box');
         box.style.width = (k2 + "%");
-        box.innerText = "15";
+        box.innerText = "Click to add element";
         box.addEventListener('click',()=>{
             if(!is_ready)
             {
@@ -34,6 +34,9 @@ option_size.addEventListener('change', () => {
             if(value!=null)
             {
                 box.innerText=value;
+            }
+            else{
+                return ;
             }
             left_to_click--;
             if(!left_to_click){is_ready=true;}
